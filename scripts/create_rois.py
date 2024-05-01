@@ -12,17 +12,20 @@ from omero.model import RoiI, MaskI
 # Based on Julio's script: https://github.com/Georgesalzoghby/Image-Data-Annotation/blob/main/scripts/annotate_rois.py
 
 
-PROJECT_NAME = "idr0156-szabo-tadcnd/experimentA"
-PATH = "/uod/idr/filesets/idr0156-szabo-tadcnd/20220614-Globus/idr0xxx-szabo-tads_<DATASET_NAME>/<IMAGE_NAME>"
+PROJECT_NAME = "idr0156-szabo-tadcnd/experiment"
+# /uod/idr/filesets/idr0156-szabo-tadcnd/20220614-Globus/idr0xxx-szabo-tads_ExperimentA/ESC
+PATH = "/uod/idr/filesets/idr0156-szabo-tadcnd/20220614-Globus/idr0xxx-szabo-tads_Experiment<ID>/<DATASET_NAME>/<IMAGE_NAME>"
 
 
 def load_images(conn):
-    project = conn.getObject("Project", attributes={"name": PROJECT_NAME})
-    for dataset in project.listChildren():
-        images = []
-        for image in dataset.listChildren():
-            images.append(image)
-        yield dataset, images
+    for exp in ["A", "B", "C", "D", "E", "F", "G"]:
+        proj_name = f"PROJECT_NAME{exp}"
+        project = conn.getObject("Project", attributes={"name": proj_name})
+        for dataset in project.listChildren():
+            images = []
+            for image in dataset.listChildren():
+                images.append(image)
+            yield exp, dataset, images
 
 
 def delete_masks(conn, img):
@@ -121,9 +124,10 @@ def create_roi(conn, img, shapes, name):
     return conn.getUpdateService().saveAndReturnObject(roi)
 
 
-def create_masks(conn, ds_name, base_img, label_img_name, kind):
+def create_masks(conn, exp, ds_name, base_img, label_img_name, kind):
     try:
-        path = PATH.replace("<DATASET_NAME>", ds_name)
+        path = PATH.replace("<ID>", exp)
+        path = path.replace("<DATASET_NAME>", ds_name)
         path = path.replace("<IMAGE_NAME>", label_img_name)
         label_img = tifffile.imread(path)
         if label_img.ndim == 4:
@@ -151,18 +155,18 @@ def create_masks(conn, ds_name, base_img, label_img_name, kind):
 def main():
     with omero.cli.cli_login() as c:
         conn = BlitzGateway(client_obj=c.get_client())
-        for ds, images in load_images(conn):
+        for exp, ds, images in load_images(conn):
             for img in images:
                 delete_masks(conn, img)
 
                 label_img_name = img.getName().replace(".ome.tiff", "_domains-ROIs.ome.tiff")
-                create_masks(conn, ds.getName(), img, label_img_name, "domain")
+                create_masks(conn, exp, ds.getName(), img, label_img_name, "domain")
 
                 label_img_name = img.getName().replace(".ome.tiff", "_subdomains-ROIs.ome.tiff")
-                create_masks(conn, ds.getName(), img, label_img_name, "subdomain")
+                create_masks(conn, exp, ds.getName(), img, label_img_name, "subdomain")
 
                 label_img_name = img.getName().replace(".ome.tiff", "_overlap-ROIs.ome.tiff")
-                create_masks(conn, ds.getName(), img, label_img_name, "overlap")
+                create_masks(conn, exp, ds.getName(), img, label_img_name, "overlap")
 
 
 if __name__ == "__main__":
