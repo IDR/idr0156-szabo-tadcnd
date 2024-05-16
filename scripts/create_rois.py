@@ -11,6 +11,22 @@ from omero.model import RoiI, MaskI
 
 # Based on Julio's script: https://github.com/Georgesalzoghby/Image-Data-Annotation/blob/main/scripts/annotate_rois.py
 
+"""
+This script has a lot of dependencies, best create a micromamba env for it:
+
+# install micromamba
+"${SHELL}" <(curl -L micro.mamba.pm/install.sh)
+
+# add alias
+echo "alias mm=micromamba" >> ~/.bashrc
+source ~/.bashrc
+
+# create env and install stuff
+mm env create -n cli python=3.10
+mm activate cli
+mm install omero-py
+pip install ome_model scikit-image omero-rois
+"""
 
 PROJECT_NAME = "idr0156-szabo-tadcnd/experiment"
 # /uod/idr/filesets/idr0156-szabo-tadcnd/20220614-Globus/idr0xxx-szabo-tads_ExperimentA/ESC
@@ -19,7 +35,7 @@ PATH = "/uod/idr/filesets/idr0156-szabo-tadcnd/20220614-Globus/idr0xxx-szabo-tad
 
 def load_images(conn):
     for exp in ["A", "B", "C", "D", "E", "F", "G"]:
-        proj_name = f"PROJECT_NAME{exp}"
+        proj_name = f"{PROJECT_NAME}{exp}"
         project = conn.getObject("Project", attributes={"name": proj_name})
         for dataset in project.listChildren():
             images = []
