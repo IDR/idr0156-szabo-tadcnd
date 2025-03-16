@@ -1,0 +1,78 @@
+---
+name: idr0156-szabo-tadcnd/experimentE
+
+version: 1
+
+defaults:
+  include: no
+  type: string
+  includeclient: yes
+  visible: yes
+  omitempty: yes
+
+columns:
+
+  - name: Image Number
+    clientname: Image Number
+    include: yes
+
+  - name: Date
+    clientname: Date
+    include: yes
+
+  - name: Refractive Index
+    clientname: Refractive Index
+    include: yes
+
+  - name: Staining Ch0
+    clientname: Staining Ch0
+    include: yes
+
+  - name: Sir Tag
+    clientname: Sir Tag
+    include: yes
+
+  - name: Thresholded Tag
+    clientname: Thresholded Tag
+    include: yes
+
+  - name: Label Ch0
+    clientname: Label Ch0
+    include: yes
+
+
+  ######################################################################
+  # mapr groups
+  ######################################################################
+
+  - group:
+      namespace: openmicroscopy.org/mapr/organism
+      columns:
+        - name: Characteristics [Organism]
+          clientname: Organism
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line
+      columns:
+      - name: Characteristics [Cell Line]
+        clientname: Cell Line
+        include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line/supplementary
+      columns:
+      - name: Comment [Cell Line Name]
+        clientname: Comment Cell Line Name
+        include: yes
+
+
+advanced:
+  ignore_missing_primary_key: yes
+  primary_group_keys:
+    - namespace: openmicroscopy.org/mapr/organism
+      keys:
+        - Organism
+    - namespace: openmicroscopy.org/mapr/cell_line
+      keys:
+        - Cell Line

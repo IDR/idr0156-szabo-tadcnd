@@ -1,0 +1,193 @@
+---
+name: idr0156-szabo-tadcnd/experimentB
+
+version: 1
+
+defaults:
+  include: no
+  type: string
+  includeclient: yes
+  visible: yes
+  omitempty: yes
+
+columns:
+
+  - name: Image Number
+    clientname: Image Number
+    include: yes
+
+  - name: Number Of Channels
+    clientname: Number Of Channels
+    include: yes
+
+  - name: Date
+    clientname: Date
+    include: yes
+
+  - name: Refractive Index
+    clientname: Refractive Index
+    include: yes
+
+  - name: Probe Ch0
+    clientname: Probe Ch0
+    include: yes
+
+  - name: Sir Tag
+    clientname: Sir Tag
+    include: yes
+
+  - name: Thresholded Tag
+    clientname: Thresholded Tag
+    include: yes
+
+  - name: Label Ch0
+    clientname: Label Ch0
+    include: yes
+
+  - name: Chr Ch0
+    clientname: Chr Ch0
+    include: yes
+
+  - name: Start Ch0
+    clientname: Start Ch0
+    include: yes
+
+  - name: End Ch0
+    clientname: End Ch0
+    include: yes
+
+  - name: Size bp Ch0
+    clientname: Size bp Ch0
+    include: yes
+
+  - name: Number Oligos Ch0
+    clientname: Number Oligos Ch0
+    include: yes
+
+  - name: Density Ch0
+    clientname: Density Ch0
+    include: yes
+
+  - name: Primer Code Ch0
+    clientname: Primer Code Ch0
+    include: yes
+
+  - name: Primer Name Forward Ch0
+    clientname: Primer Name Forward Ch0
+    include: yes
+
+  - name: Primer Sequence Forward Ch0
+    clientname: Primer Sequence Forward Ch0
+    include: yes
+
+  - name: Primer Name Reverse Ch0
+    clientname: Primer Name Reverse Ch0
+    include: yes
+
+  - name: Primer Sequence Reverse Ch0
+    clientname: Primer Sequence Reverse Ch0
+    include: yes
+
+  - name: Cluster NPC Ch0
+    clientname: Cluster NPC Ch0
+    include: yes
+
+  - name: Probe Ch1
+    clientname: Probe Ch1
+    include: yes
+
+  - name: Aligned Tag
+    clientname: Aligned Tag
+    include: yes
+
+  - name: Label Ch1
+    clientname: Label Ch1
+    include: yes
+
+  - name: Chr Ch1
+    clientname: Chr Ch1
+    include: yes
+
+  - name: Start Ch1
+    clientname: Start Ch1
+    include: yes
+
+  - name: End Ch1
+    clientname: End Ch1
+    include: yes
+
+  - name: Size bp Ch1
+    clientname: Size bp Ch1
+    include: yes
+
+  - name: Number Oligos Ch1
+    clientname: Number Oligos Ch1
+    include: yes
+
+  - name: Density Ch1
+    clientname: Density Ch1
+    include: yes
+
+  - name: Primer Code Ch1
+    clientname: Primer Code Ch1
+    include: yes
+
+  - name: Primer Name Forward Ch1
+    clientname: Primer Name Forward Ch1
+    include: yes
+
+  - name: Primer Sequence Forward Ch1
+    clientname: Primer Sequence Forward Ch1
+    include: yes
+
+  - name: Primer Name Reverse Ch1
+    clientname: Primer Name Reverse Ch1
+    include: yes
+
+  - name: Primer Sequence Reverse Ch1
+    clientname: Primer Sequence Reverse Ch1
+    include: yes
+
+  - name: Cluster NPC Ch1
+    clientname: Cluster NPC Ch1
+    include: yes
+
+
+  ######################################################################
+  # mapr groups
+  ######################################################################
+
+  - group:
+      namespace: openmicroscopy.org/mapr/organism
+      columns:
+        - name: Characteristics [Organism]
+          clientname: Organism
+          include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line
+      columns:
+      - name: Characteristics [Cell Line]
+        clientname: Cell Line
+        include: yes
+
+  - group:
+      namespace: openmicroscopy.org/mapr/cell_line/supplementary
+      columns:
+      - name: Comment [Cell Line Name]
+        clientname: Comment Cell Line Name
+        include: yes
+      - name: Comment [Cell Line Source]
+        clientname: Comment Cell Line Source
+        include: yes
+
+
+advanced:
+  ignore_missing_primary_key: yes
+  primary_group_keys:
+    - namespace: openmicroscopy.org/mapr/organism
+      keys:
+        - Organism
+    - namespace: openmicroscopy.org/mapr/cell_line
+      keys:
+        - Cell Line

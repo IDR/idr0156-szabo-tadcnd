@@ -1,0 +1,4 @@
+Dataset Name,Image Name,Characteristics [Organism],Term Source 1 REF,Term Source 1 Accession,Characteristics [Cell Line],Term Source 2 REF,Term Source 2 Accession,Comment [Cell Line Name],Image Number,Date,Refractive Index,Staining Ch0,Sir Tag,Thresholded Tag,Label Ch0
+Mouse_ESC_DAPI,20191115_RI5108_ESC_DAPI_SIR_THR_2.ome.tiff,Mus musculus,NCBITaxon,NCBITaxon_10090,ES-E14TG2a,EFO,EFO_0006275,ESC,2,20191115,RI5108,DAPI,SIR,THR,DAPI
+Mouse_ESC_DAPI,20191115_RI5108_ESC_DAPI_SIR_THR_1.ome.tiff,Mus musculus,NCBITaxon,NCBITaxon_10090,ES-E14TG2a,EFO,EFO_0006275,ESC,1,20191115,RI5108,DAPI,SIR,THR,DAPI
+Mouse_ESC_DAPI,20191115_RI5108_ESC_DAPI_SIR_THR_3.ome.tiff,Mus musculus,NCBITaxon,NCBITaxon_10090,ES-E14TG2a,EFO,EFO_0006275,ESC,3,20191115,RI5108,DAPI,SIR,THR,DAPI
