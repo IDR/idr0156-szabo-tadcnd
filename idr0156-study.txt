@@ -15,7 +15,7 @@ Study Organism Term Accession
 Study Experiments Number	7
 Study External URL	
 Study BioImage Archive Accession
-Study Public Release Date
+Study Public Release Date	2025-05-08
 
 # Study Publication
 Study PubMed ID	33077913
