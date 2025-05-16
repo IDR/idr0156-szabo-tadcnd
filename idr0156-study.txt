@@ -8,7 +8,7 @@ Study Type	epigenetic process
 Study Type Term Source REF	NCIT
 Study Type Term Accession	NCIT_C21051
 Study Description	The genome folds into a hierarchy of three-dimensional structures within the nucleus. At the sub-megabase scale, chromosomes form topologically associating domains (TADs). However, how TADs fold in single cells is elusive. Here, we reveal TAD features inaccessible to cell population analysis by using super-resolution microscopy. TAD structures and physical insulation associated with their borders are variable between individual cells,  yet chromatin intermingling is enriched within TADs compared to adjacent TADs in most cells. The spatial segregation of TADs is further exacerbated during cell differentiation.  Favored interactions within TADs are regulated by cohesin and CTCF through distinct mechanisms:  cohesin generates chromatin contacts and intermingling while CTCF prevents inter-TAD contacts.  Furthermore, TADs are subdivided into discrete nanodomains, which persist in cells depleted of CTCF or cohesin,  whereas disruption of nucleosome contacts alters their structural organization. Altogether, these results provide a physical basis for the folding of individual chromosomes at the nanoscale.
-Study Key Words	mouse	Embryonic Stem Cell (ESC)	neural progenitor cell (NPC)	chromosomes	nanoscale organization	topologically associating domain (TAD)	chromatin nanodomain (CND)	FISH	Oligopaint probes	Structured Illumination Microscopy (SIM)	single-cell analysis	CTCF	cohesin/RAD21	TSA
+Study Key Words	mouse Embryonic Stem Cell (ESC)	neural progenitor cell (NPC)	chromosomes	nanoscale organization	topologically associating domain (TAD)	chromatin nanodomain (CND)	FISH	Oligopaint probes	Structured Illumination Microscopy (SIM)	single-cell analysis	CTCF	cohesin/RAD21	TSA
 Study Organism	
 Study Organism Term Source REF	NCBITaxon
 Study Organism Term Accession	
@@ -38,7 +38,7 @@ Study License	CC BY 4.0
 Study License URL	https://creativecommons.org/licenses/by/4.0/
 Study Copyright	Szabo et al
 Study Data Publisher	University of Dundee
-Study Data DOI	
+Study Data DOI	https://doi.org/10.17867/10000206	
 
 Term Source Name	NCBITaxon	EFO	CMPO	FBbi
 Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http://www.ebi.ac.uk/cmpo/,http://purl.obolibrary.org/obo/
@@ -48,6 +48,7 @@ Term Source URI	http://purl.obolibrary.org/obo/	http://www.ebi.ac.uk/efo/	http:/
 
 Experiment Number	1
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentA
+Experiment Data DOI	https://doi.org/10.17867/10000206a
 Experiment Sample Type	cell
 Experiment Description	Mouse embryonic stem cells (ESCs) were cultured in the conditions described below (see Protocol Description) and they were fixed on coverslips prior to the Fluorescent in situ Hybridization (DNA FISH) procedure. A large set of Oligopaint probes covering Topologically Associating Domains (TADs) of various size and various epigenetic signatures were used for the DNA FISH. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in mouse ESCs (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes within TADs or between TADs, see the article) and the identification of TAD sub-structures, dubbed Chromatin NanoDomains (CNDs), by applying watershed-segmentation on the Oligopaint probe fluorescent signal. Assays TSA and TSA-CTL (control) were performed in parallel with and without trichostatin-A (TSA), respectively. TSA is a potent inhibitor of histone deacetylases that induces histone hyperacetylation.
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 55x55x56xCx1	Total Tb: 0.002
@@ -102,6 +103,7 @@ Processed Data Column Link To Assay File	Image Name
 
 Experiment Number	2
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentB
+Experiment Data DOI	https://doi.org/10.17867/10000206b
 Experiment Sample Type	cell
 Experiment Description	Mouse neural progenitor cells (NPCs) were obtained in the conditions described below (see Protocol Description) and they were fixed on coverslips prior to the Fluorescent in situ Hybridization (DNA FISH) procedure. A large set of Oligopaint probes covering Topologically Associating Domains (TADs) of various size and various epigenetic signatures were used for the DNA FISH. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in mouse NPCs (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes within TADs or between TADs, see the article) and the identification of TAD sub-structures, dubbed Chromatin NanoDomains (CNDs), by applying watershed-segmentation on the Oligopaint probe fluorescent signal. These data were compared to the ESC conditions from Experiment Mouse_ESC_TADs. NPC from cryo-section of mouse brain neocortex of  E14.5 C57BL/6J embryos (ncxNPC) were subjected to the DNA FISH procedure as in Experiment Mouse_ESC_TADs. Two pairs of TAD probes were observed and were monitored by pair to compare their degree of intermingling (Overlap Fractions (OFs) and 3D distances with consecutive Oligopaint probes between adjacent TADs, see the article) with ESCs from Experiment Mouse_ESC_TADs and this experiment. Slides with hybridized cells were observed with 3D-SIM.
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 55x55x56xCx1	Total Tb: 0.001
@@ -156,6 +158,7 @@ Processed Data Column Link To Assay File	Image Name
 
 Experiment Number	3
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentC
+Experiment Data DOI	https://doi.org/10.17867/10000206c
 Experiment Sample Type	cell
 Experiment Description	Same experience as in Mouse_ESC_TADs, but with mouse CTCF-AID ES cells allowing for the rapid degradation of the CTCF factor. Assays CTCF-AID_AUX and CTCF-AID_AUX-CTL (control) were performed in parallel with and without Auxin, respectively. Auxin treatment induces the rapid degradation of CTCF.
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 55x55x56xCx1	Total Tb: 0.002
@@ -210,6 +213,7 @@ Processed Data Column Link To Assay File	Image Name
 
 Experiment Number	4
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentD
+Experiment Data DOI	https://doi.org/10.17867/10000206d
 Experiment Sample Type	cell
 Experiment Description	Same experience as in  Mouse_ESC_TADs, but with mouse RAD21-AID ES cells allowing for the rapid degradation of RAD21, a cohesin complex subunit. Assays RAD21-AID_AUX and RAD21-AID_AUX-CTL (control) were performed in parallel with and without Auxin, respectively. Auxin treatment induces the rapid degradation of RAD21.
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 55x55x56xCx1	Total Tb: 0.003
@@ -264,6 +268,7 @@ Processed Data Column Link To Assay File	Image Name
 
 Experiment Number	5
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentE
+Experiment Data DOI	https://doi.org/10.17867/10000206e
 Experiment Sample Type	cell
 Experiment Description	Using the same cells as in Mouse_ESC_TADs, immobilized cells on a coverslip were fixed and nuclei were counterstained with DAPI for CND segmentation without the FISH procedure. DAPI stained nuclei were then observed with Structured Illumination Microscopy (3D-SIM).
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 512x512x1x1x1	Total Tb: 0
@@ -318,6 +323,7 @@ Processed Data Column Link To Assay File	Image Name
 
 Experiment Number	6
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentF
+Experiment Data DOI	https://doi.org/10.17867/10000206f
 Experiment Sample Type	cell
 Experiment Description	Using staged 15-16 Drosophila embryos (Drosophila melanogaster), derived cells were immobilized on a coverslip, fixed and  nuclei were counterstained with DAPI for CND segmentation without the FISH procedure. DAPI stained nuclei were then observed with Structured Illumination Microscopy (3D-SIM).
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 150x150x1x1x1	Total Tb: 0
@@ -372,6 +378,7 @@ Processed Data Column Link To Assay File	Image Name
 
 Experiment Number	7
 Comment[IDR Experiment Name]	idr0156-szabo-tadcnd/experimentG
+Experiment Data DOI	https://doi.org/10.17867/10000206g
 Experiment Sample Type	cell
 Experiment Description	Using staged 15-16 Drosophila embryos (Drosophila melanogaster), derived cells were immobilized on a coverslip, fixed and submitted to the DNA FISH procedure using an Oligopaint probe targetting a drosophila TAD of 110 kb located on the X Chromosome. Coverslips with hybridized cells were then observed with Structured Illumination Microscopy (3D-SIM). This approach allows for the description of TAD organization in Drosphila cells. In this species, TADs ressemble CNDs in term of genomic size, diameter and volume.
 Experiment Size 5D Images: 	Average Image Dimension (XYZCT): 55x55x56x1x1	Total Tb: 0
